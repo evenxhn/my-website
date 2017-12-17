@@ -1,0 +1,544 @@
+﻿
+
+/* 导航的颜色 */
+
+#fp-nav ul li a span {
+    background-color: red;
+}
+
+.section_content {
+    width: 1000px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    /* margin-left: -500px; */
+    transform: translateX(-50%);
+   
+    /* border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000; */
+    /* 
+  margin-left
+  left 
+  百分比 都是相对于父元素的宽度的
+  translateX 百分比 是相对于自身的宽度的
+   */
+}
+
+
+/* 第一屏 开始 */
+
+.s1 {
+    /* background-image: url("../images/t1fpyqfltdxxaiulhh-990-600.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #f9dd67; */
+    background: url("../images/t1fpyqfltdxxaiulhh-990-600.png") center bottom no-repeat #f9dd67;
+    position: relative;
+}
+
+
+/* 泡泡 */
+
+.s1_paopao {
+    /* 因为背景图片是根据底部进行定位  */
+    position: absolute;
+    bottom: 150px;
+    left: 8%;
+}
+
+
+/* 飞船 */
+
+.s1_airship {
+    /* posab */
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    animation: ani_updown 2s infinite linear alternate;
+    /* 动画名 */
+    /* animation-name: ani_updown; */
+    /* 持续时间 */
+    /* animation-duration: 1s; */
+    /* 循环次数 */
+    /* animation-iteration-count: infinite; */
+    /* 动画的方向 alternate 先正再反 */
+    /* animation-direction:alternate; */
+    /* 速度曲线 linear 匀速  */
+    /* animation-timing-function:linear; */
+}
+
+
+/* 声明动画 */
+
+@keyframes ani_updown {
+    0% {}
+    /* from{} */
+    100% {
+        transform: translateY(50%);
+    }
+}
+
+
+/* 沙发 */
+
+.s1_sf {
+    position: absolute;
+    bottom: 355px;
+    left: 30%;
+    animation: ani_updown 2s infinite linear alternate;
+}
+
+
+/* 第一屏 结束 */
+
+
+/* 第二屏 开始 */
+
+.s2 {
+    background: url("../images/t1zdgpfi8exxca6rfn-2000-600.png") center bottom no-repeat #84a2d4;
+}
+
+.s2_search_empty {
+    position: absolute;
+    right: -18%;
+    bottom: 300px;
+    /* 
+  
+  
+  left 50%
+  margin-left:-宽度一半
+  */
+}
+
+
+/* 沙发的文字  */
+
+.s2_sf_font {
+    position: absolute;
+    bottom: 311px;
+    left: 51.3%;
+    display: none;
+}
+
+
+/* 带上沙发文字的图片 */
+
+.s2_search_full {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.s2_sfs {
+    position: absolute;
+    width: 150px;
+    right: 28%;
+    bottom: 210px;
+    display: none;
+    /* 原图大小 441px */
+}
+
+.s2_title1,
+.s2_title2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.s2_title2 {
+    display: none;
+}
+
+.s2_wrap {
+    position: absolute;
+    bottom: 321px;
+    left: 39%;
+    background-color: #fff;
+    width: 108px;
+    height: 108px;
+    display: none;
+}
+
+
+/* 第二屏 结束 */
+
+
+/* 第三屏 开始 */
+
+.s3 {
+    background: url("../images/main.png") center bottom no-repeat #ef674d;
+}
+
+.s3_sf {
+    position: absolute;
+    /* bottom: 34%;
+    left: 26%; */
+    bottom: 146%;
+    left: 39.3%;
+    width: 103px;
+    display: none;
+}
+
+.s3_black_size,
+.s3_white_size {
+    position: absolute;
+    bottom: 25%;
+    right: 16.5%;
+}
+
+.s3_white_size {
+    display: none;
+}
+
+.s3_black_car,
+.s3_white_car {
+    position: absolute;
+    bottom: 10%;
+    right: 24.5%;
+}
+
+.s3_white_car {
+    display: none;
+}
+
+
+/* 第三屏 结束 */
+
+
+/* 第四屏 开始 */
+
+.s4 {
+    /* background: url("../images/t1iresfnxaxxca6rfn-2000-600.png") 50% 100%   no-repeat; */
+    background: url("../images/t1iresfnxaxxca6rfn-2000-600.png") center bottom no-repeat #ffeedd;
+}
+
+.s4_full_car {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+
+.s4_empty_car {}
+
+.s4_qx_sf {
+    position: absolute;
+    left: 34%;
+    z-index: -1;
+    /* 掉出屏幕的外边 */
+    bottom: -248px;
+}
+
+.s4_title1,
+.s4_title2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.s4_title2 {
+    display: none;
+}
+
+.s4_adress {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 200px;
+    display: none;
+}
+
+.s4_adress_name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+.s4_cloud {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    animation-name: ani_s4_cloud;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ani_s4_cloud {
+    from {}
+    to {
+        transform: translateX(-500px);
+    }
+}
+
+
+/* 第四屏 结束*/
+
+
+/* 第五屏 开始 */
+
+.s5 {
+    background: url("../images/t1yisqfa4exxa3gmkg-2000-1500.png");
+    overflow: hidden;
+}
+
+.s5_bank_card {
+    position: absolute;
+    left: 0;
+    bottom: 29%;
+}
+
+.s5_mouse,
+.s5_mouse02 {
+    position: absolute;
+    right: 44px;
+    /* top: -41%; */
+    bottom: 220px;
+}
+
+.s5_mouse02 {
+    display: none;
+}
+
+.s5_hand {
+    position: absolute;
+    /* bottom: 0; */
+    bottom: -375px;
+    right: 89px;
+}
+
+.s5_sf {
+    position: absolute;
+    left: 40px;
+    /* bottom: 15%; */
+    bottom: 100%;
+}
+
+.s5_bill {
+    position: absolute;
+    left: 82px;
+    bottom: 40%;
+    /* 
+    left: 82px;
+    bottom: 57%; */
+}
+
+.s5 .section_content {
+    perspective: 1000px;
+}
+
+.s5_title1 {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    /* 
+    all 所有   能不用all 就不用  遍历所有可以产生的属性 
+    transform  
+
+    dislplay  有过渡效果吗 没有过渡效果 
+    width :0 -> width: 100
+     */
+    transition: all 1s;
+    /* display: none; */
+    opacity: 0;
+}
+
+.s5_title_rotate {
+    /* 
+    translateZ 要搭配 视距
+    perspective 要给父元素加上
+     */
+    transform: rotate(360deg) translateZ(158px);
+    opacity: 1;
+}
+
+
+/* 第五屏 结束 */
+
+
+/*  第六屏 开始 */
+
+.s6 {
+    background: url("../images/t1dvj.fn0gxxb0_fua-2500-600.png") 25% 100% no-repeat #85d9ed;
+    /* overflow: hidden; */
+    /* background-position:  x y */
+}
+
+.s6_sf_move {
+    position: absolute;
+    bottom: 115%;
+    left: 20%;
+    display: none;
+    /* width: 50px;
+    left: 28%; 
+    botttom:70%
+    */
+}
+
+.s6_box {
+    position: absolute;
+    bottom: 70%;
+    left: 5%;
+    /* left: 25%; */
+}
+
+.s6_car {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+.s6_title1 {
+    position: absolute;
+    top: 15%;
+    left: -308px;
+    /* left: 24%; */
+}
+
+.s6_zy88 {
+    position: absolute;
+    bottom: 15%;
+    left: 37%;
+    display: none;
+}
+
+.s6_boys {
+    position: absolute;
+    bottom: 15px;
+    left: 35%;
+    width: 50px;
+    /* width: 252px;
+    left: 23%;
+    bottom: 16%; */
+    /* 43% */
+}
+
+.s6_door {
+    position: absolute;
+    bottom: 116px;
+    right: 284px;
+    display: none;
+}
+
+.s6_girl {
+    position: absolute;
+    right: 307px;
+    bottom: 116px;
+    width: 30px;
+    display: none;
+    /* width: 87px;
+    right: 358px; */
+}
+
+.s6_recive {
+    position: absolute;
+    bottom: 61%;
+    right: 34%;
+    display: none;
+}
+
+.s6_cloud {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+
+/* 第六屏 结束  */
+
+
+/* 第七屏 开始 */
+
+.s7 {
+    background: url("../images/t1wf1tfctaxxa3gmkg-2000-1500.png") center bottom no-repeat;
+}
+
+.s7_star {
+    position: absolute;
+    bottom: 60%;
+    left: 20.2%;
+    height: 20px;
+    background-image: url(../images/star.png);
+    background-size: 102px 18px;
+    background-repeat: no-repeat;
+    /* display:  */
+    width: 0;
+}
+
+.s7_good_comment {
+    position: absolute;
+    bottom: 53%;
+    left: 22%;
+    display: none;
+}
+
+
+/* 第七屏 结束 */
+
+
+/* 第八屏 开始 */
+
+.s8 {
+    background: url("../images/ksgw.png");
+}
+
+.s8_begin_shop {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 389px;
+    height: 160px;
+}
+
+.s8_begin_shop:hover .s8_shop_png {
+    display: none;
+}
+
+.s8_begin_shop:hover .s8_shop_gif {
+    display: block;
+}
+
+.s8_begin_shop>img {
+    position: absolute;
+    top: 0;
+}
+
+.s8_shop_gif {
+    display: none;
+}
+
+.s8_again {
+    position: absolute;
+    top: 40%;
+    left: 75%;
+}
+
+.s8_hand {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+}
+
+
+/* 第八屏 结束 */
+
+.nextSection{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 5;
+    /* 
+    标签-有大小 不显示
+    1 透明度
+    2 层级
+
+     */
+}

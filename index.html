@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物网站-前端13期</title>
+  <!-- 1  -->
+  <link rel="stylesheet" href="./css/jquery.fullpage.css">
+  <!-- ctrl+鼠标左键 -->
+  <link rel="stylesheet" href="./css/index.css">
+
+  <script src="./js/jquery.js"></script>
+  <!-- 实现更加酷炫的动画效果的 -->
+  <script src="./js/jquery.easing.js"></script>
+  <script src="./js/jquery.fullpage.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+<!-- 
+  1  学会fullpage.js插件的使用
+  2  复习和巩固以前的知识 
+  3  要尤其珍惜出bug的时候  
+  4  学会一种设计思想-项目的设计思想   
+ -->
+
+<body>
+  <!-- 下一屏幕 -->
+  <a href="javascript:;" class="nextSection">
+    <img src="./images/next.png" alt="">
+  </a>
+  <div id="fullpage">
+    <div class="section  s1">
+      <!-- 版心  -->
+      <div class="section_content">
+        <!-- 起泡 -->
+        <img src="./images/t1iakufbxxxxctz4tl-824-274.png" alt="" class="s1_paopao">
+
+        <!-- 飞船 动画 -->
+        <img src="./images/t1wsqsfgnaxxxmjxp6-470-50.png" alt="" class="s1_airship">
+
+        <!-- 沙发  -->
+        <img src="./images/t1xccqfflgxxxild.png" alt="" class="s1_sf">
+        <!-- 双击能否选中所有的区别 -->
+        <!-- <img src="" alt="" class="s1-abc"> -->
+      </div>
+      <!-- 
+        1 网页 使用图片有两种  img 标签  第二种 背景图片 
+        2 子元素 在进行定位的时候 要考虑 要top 还是bottom left 还是 如果right 
+        3 发现有某些 复杂功能要实现的时候 要注意看api 文档 
+       -->
+    </div>
+    <div class="section s2 ">
+      <div class="section_content">
+        <!-- 
+          动态效果分析
+          1 用动画做也可以     我想要的效果是兼容性比较好的  每一个动画都是线性执行 
+          2 动画做效果 可以确保每个动画都是按照 上个动画结束之后再执行的吗  c3动画没有办法像 jq 的回调函数一样 线性执行
+          3 使用 jq  animate 来做可以达到目的 
+         -->
+        <!-- 黑色的文字提示 -->
+        <img src="./images/words-01-361-25.png" alt="" class="s2_title1">
+        <!-- 白色的文字提示 -->
+        <img src="./images/words-02.png" alt="" class="s2_title2">
+        <!-- 没有文字的搜索框 -->
+        <img src="./images/search.png" alt="" class="s2_search_empty">
+
+        <!-- 沙发 文字 -->
+        <img src="./images/search-words.png" alt="" class="s2_sf_font">
+
+        <!-- 带上沙发的图片 显示 -->
+        <img src="./images/search-02-1.png" alt="" class="s2_search_full">
+
+        <!-- 带有多个沙发的图片 -->
+        <img src="./images/goods-441-218.png" alt="" class="s2_sfs">
+
+        <!-- 白色的遮罩层 -->
+        <div class="s2_wrap"></div>
+      </div>
+    </div>
+    <div class="section s3">
+      <div class="section_content">
+        <!-- 沙发图片 -->
+        <img src="./images/shirt-02-207-166.png" alt="" class="s3_sf">
+
+        <!-- 黑色尺寸 -->
+        <img src="./images/img-01.gif" alt="" class="s3_black_size">
+        <!-- 白色尺寸 -->
+        <img src="./images/img-01-a.gif" alt="" class="s3_white_size">
+        <!-- 黑色购物车 -->
+        <img src="./images/btn-01.gif" alt="" class="s3_black_car">
+        <!-- 白色购物车  -->
+        <img src="./images/btn-01-a.gif" alt="" class="s3_white_car">
+      </div>
+    </div>
+    <div class="section s4  ">
+      <div class="section_content">
+
+        <!-- ☁ 云 -->
+        <img src="./images/cloud.png" alt="" class="s4_cloud">
+
+        <!-- 文字提示1 -->
+        <img src="./images/words-04.png" alt="" class="s4_title1">
+        <!-- 文字提示1 -->
+        <img src="./images/words-04-a.png" alt="" class="s4_title2">
+
+        <!-- 收货地址 -->
+        <div class="s4_adress">
+          <img src="./images/t1.png" alt="">
+          <img class="s4_adress_name" src="./images/t1sqosfx8bxxa9wx_i-173-47.png" alt="">
+        </div>
+
+        <div class="s4_full_car">
+          <!-- 空的购物车 -->
+          <img src="./images/car.png" alt="" class="s4_empty_car">
+          <!-- 倾斜的沙发 放在上一屏幕里的 -->
+          <img src="./images/t1f.png" alt="" class="s4_qx_sf">
+        </div>
+      </div>
+    </div>
+    <div class="section s5  ">
+      <div class="section_content">
+        <!-- 文字提示 -->
+        <img src="./images/words-05.png" alt="" class="s5_title1 ">
+        <!-- 沙发 -->
+        <img src="./images/t1f.png" alt="" class="s5_sf">
+
+        <!-- 账单 -->
+        <img src="./images/order-05.png" alt="" class="s5_bill">
+
+        <!-- 银行卡 -->
+        <img src="./images/card-05.png" alt="" class="s5_bank_card">
+
+        <!-- 鼠标 -->
+        <img src="./images/mouse-05.png" alt="" class="s5_mouse">
+        <!-- 黑色按钮 -->
+        <img src="./images/mouse-05-a.png" alt="" class="s5_mouse02">
+        <!-- 手 -->
+        <img src="./images/hand-05.png" alt="" class="s5_hand">
+
+
+      </div>
+    </div>
+    <div class="section s6  ">
+      <!-- 云 -->
+      <img src="./images/cloud-06.png" alt="" class="s6_cloud">
+
+      <!-- 不添加版心了!!  -->
+      <img src="./images/t1f.png" alt="" class="s6_sf_move">
+
+      <!-- 文字提示 -->
+      <img src="./images/words-06-a.png" alt="" class="s6_title1">
+
+      <!-- 快递箱子 -->
+      <img src="./images/box.png" alt="" class="s6_box">
+
+      <!-- 快递男孩 -->
+      <img src="./images/man.png" class="s6_boys" alt="">
+      <!-- 快递车 -->
+      <img src="./images/car-06.png" alt="" class="s6_car">
+
+      <!-- 遵义 88  -->
+      <img src="./images/88.png" class="s6_zy88" alt="">
+
+      <!-- 门 -->
+      <img src="./images/door.png" alt="" class="s6_door">
+
+      <!-- 女孩 -->
+      <img src="./images/women.png" alt="" class="s6_girl">
+
+      <!-- 请收货 -->
+      <img src="./images/t1kzyqffnexxbcrepj-139-173.png" alt="" class="s6_recive">
+    </div>
+    <div class="section s7 ">
+      <div class="section_content">
+        <!-- 星星 -->
+        <!-- <img src="./images/star.png" alt="" class="s7_star"> -->
+        <div class="s7_star"></div>
+        <!-- 好评 -->
+        <img src="./images/good-07.png" alt="" class="s7_good_comment">
+      </div>
+
+    </div>
+    <div class="section s8 ">
+      <div class="section_content">
+        <!-- 开始购物 png -->
+        <div class="s8_begin_shop">
+            <img src="./images/btn-08.png" alt="" class="s8_shop_png">
+            <img src="./images/btn-08-a.gif" alt="" class="s8_shop_gif">
+        </div>
+        <!-- 再来一次 -->
+        <a class="s8_again" href="#">
+          <img src="./images/t1ulasfmldxxbheta4-105-34.png" alt="">
+        </a>
+        <!-- 手 -->
+        <img src="./images/hand-08.png" alt="" class="s8_hand">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
+<!-- 
+  active
+
+  
+ -->
+
+<!-- 
+  万 绍业  少爷  万少  老师  帅哥 美女
+  狗蛋 
+  石头 王者荣耀
+ -->
